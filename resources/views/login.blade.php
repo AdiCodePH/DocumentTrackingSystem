@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
-
 <body class="auth-body">
     <main class="auth-shell">
         <section class="auth-panel">
@@ -22,18 +21,15 @@
                     <h1>Document Tracking System</h1>
                 </div>
             </div>
-
             <form class="auth-form" method="POST" action="login">
                 @csrf
                 <div>
                     <p class="eyebrow">Secure Access</p>
                     <h2>Sign in to continue</h2>
                 </div>
-
                 @if ($errors->any())
                     <div class="auth-alert" role="alert">{{ $errors->first() }}</div>
                 @endif
-
                 <label>
                     Email address
                     <input name="email" type="email" value="{{ old('email') }}" required autocomplete="email"
@@ -44,7 +40,6 @@
                     <input name="password" type="password" required autocomplete="current-password"
                         placeholder="Enter password">
                 </label>
-
                 <label class="remember-row">
                     <input name="remember" type="checkbox" value="1">
                     Remember me
@@ -54,7 +49,6 @@
                     <span class="material-icons-outlined">login</span>
                     Log in
                 </button>
-
                 <div class="demo-credentials">
                     <strong>Default accounts</strong>
                     <span>Admin: admin@example.com / admin123</span>
@@ -68,5 +62,4 @@
         </section>
     </main>
 </body>
-
 </html>
